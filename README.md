@@ -1,6 +1,6 @@
 # SP25-WEB-TECH
 
-Name: Muhammad Hassan Farooqi
+Name: Muhammad Hassan Farooqi    
 Roll No: FA21-BSE-112
 
 Course Instructor: Muhammad Usman Akram
