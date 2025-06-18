@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to the Admin Dashboard</h1>
+    <div class="container">
+        <h2 class="mt-5">Manage Products</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (products.length === 0) { %>
+                <tr>
+                    <td colspan="3" class="text-center">No products found.</td>
+                </tr>
+                <% } else { %>
+                <% for (let i = 0; i < products.length; i++) { %>
+                <tr>
+                    <td><%= products[i].name %></td>
+                    <td>$<%= products[i].price %></td>
+                    <td>
+                        <a href="/edit<%= products[i]._id %>/edit" class="btn btn-warning">Edit</a>
+                        <form action="/delete<%= products[i]._id %>?_method=DELETE" method="POST" class="d-inline">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                <% } %>
+                <% } %>
+                <a href="/create" class="btn btn-primary">Create New Product</a>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
