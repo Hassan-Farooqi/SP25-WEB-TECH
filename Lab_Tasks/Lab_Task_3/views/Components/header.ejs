@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+        <a class="navbar-brand brand-font fs-3" href="#">Joseph Fashion</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <!-- <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="/LandingPage#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/LandingPage#products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cart">Shopping Cart</a>
+                </li>
+                <% if(!user) {%>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Login">Login</a>
+                </li>
+                <% }else { %>
+                <li class="nav-item">
+                <a href="/logout" class="nav-link">Logout</a>
+                </li>
+                <% } %>
+                <% if(isAdmin) { %>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin">Admin Dashboard</a>
+                </li>
+                <% } %>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
